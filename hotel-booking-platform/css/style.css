@@ -1,0 +1,500 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures content is properly spaced */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1d1d1d;
+    padding: 10px 20px;
+}
+
+/* Logo */
+#logo {
+    margin-left: 15px;
+}
+
+#logo img {
+    height: 56px;
+    margin: -18px 7px;
+}
+
+/* Navbar Background */
+#navbar::before {
+    content: "";
+    position: absolute;
+    background-color: #1d1d1d;;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navbar Menu */
+#navbar ul {
+    display: flex;
+    font-family: "Baloo 2", serif;
+}
+
+#navbar ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+#navbar ul li a {
+    color: white;
+    background-color: #1d1d1d;;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.5s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/* CTA Buttons (Login, Profile, Logout) */
+.cta {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.cta a {
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px; /* Adds spacing between buttons */
+}
+
+/* Login Button */
+.cta .login {
+    background-color: #007bff; /* Bright Blue */
+    color: #ffffff;
+}
+
+.cta .login:hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: scale(1.05);
+}
+
+/* Profile Button */
+.cta .profile {
+    background-color: #28a745; /* Green */
+    color: #ffffff;
+}
+
+.cta .profile:hover {
+    background-color: #218838; /* Darker Green */
+    transform: scale(1.05);
+}
+
+/* Logout Button */
+.cta .logout {
+    background-color: #dc3545; /* Red */
+    color: #ffffff;
+}
+
+.cta .logout:hover {
+    background-color: #c82333; /* Darker Red */
+    transform: scale(1.05);
+}
+
+
+
+/*home section*/
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 100px;
+    height: 516px;
+    justify-content: center;
+    align-items: center;
+    border-bottom:  2px solid black;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url(../img/welcome.jpg) no-repeat center center/cover;
+    height: 79%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1 {
+    color: black;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+
+#home p {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Bree Serif", serif;
+}
+
+#home a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(255, 65, 108, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#home a:hover {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 65, 108, 0.4);
+}
+
+
+/* Explore Hotels Section */
+#explore-hotels-section {
+    background: #2f2e2e; /* Ensures dark background */
+    color: white;
+    padding-bottom: 40px; /* Increases top and bottom spacing */
+}
+
+
+
+
+
+#explore-hotels {
+    text-align: center;
+    margin: 50px 0;
+    color: #fff; /* White text */
+    background-color: #2f2e2e; /* Black background */
+    padding: 40px 0;
+}
+
+/* Heading - Explore Hotels */
+#explore-hotels-section h1 {
+    color: #fff; /* White text */
+    background-color:#2f2e2e; /* Remove white background */
+    text-align: center;
+    font-size: 36px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+/* Hotel Container */
+.hotel-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 20px; /* Adjust based on need */
+    justify-content: center;
+    background-color: #2f2e2e; /* Ensuring full black background */
+}
+
+/* Hotel Box */
+.hotel-box {
+    background: #1e1e1e; /* Dark card background */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1); /* Soft glow effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.hotel-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Hotel Image */
+.hotel-box img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Hotel Title */
+.hotel-box h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #fff; /* White text */
+}
+
+/* Hotel Description */
+.hotel-box p {
+    font-size: 14px;
+    color: #bbb; /* Light gray text */
+}
+
+/* Book Now Button */
+.hotel-box .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #ff8c00; /* Orange button */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.hotel-box .btn:hover {
+    background: #e67e00;
+    transform: scale(1.05);
+}
+
+
+/* servies section */
+
+
+#services-container {
+    background-color:#2f2e2e; /* Remove white background */
+    margin-top: -6px;
+}
+
+#services-container h1 {
+    color: #ffffff; /* Accent color */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#services {
+    margin: 0px 40px;
+    display: flex;
+    padding-bottom: 35px;
+}
+
+#services .box {
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 34px;
+    margin: 15px;
+    border-radius: 25px;
+    background-color: #8a7f7f;
+    transition: transform 0.3s ease;
+}
+
+#services .box:hover {
+    transform: translateY(-10px);
+    border: 2px solid #000000;
+    color: #d2bbbb;
+    background-color: #4c4c4c
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: "Bree Serif", serif;
+}
+
+/* partners section */
+
+#partner-section {
+    position: relative;
+    height: 300px;
+    margin-top: -1px;
+}
+
+#partner-section::before {
+    content: "";
+    position: absolute;
+    /* background-color: #2f2e2e; */
+    background: url(../img/partner.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    margin-top: 0px;
+}
+
+#partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.partner-item {
+    padding: 35px;
+}
+
+#partner img {
+    height: 120px;
+    margin: auto;
+    display: block;
+    z-index: -1;
+}
+
+#contact-section {
+    text-align: center;
+    background: #2f2e2e;
+    color: #fff;
+    padding: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Footer Section */
+.footer {
+    background-color: #1d1d1d;
+    color: #0e0101;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Top Section */
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+    max-width: 300px;
+}
+.footer-logo img{
+    flex: 1;
+    text-align: left;
+    max-width: 100px;
+    margin-left: 37px;
+}
+.footer-logo h3 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    margin-left: 18px;
+}
+
+.footer-logo p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.footer-links, .footer-social {
+    flex: 1;
+    text-align: left;
+    max-width: 300px;
+}
+
+.footer-links h4, .footer-social h4 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style-type: none;
+}
+
+.footer-links ul li, .footer-social ul li {
+    margin: 10px 0;
+}
+
+.footer-links a, .footer-social a {
+    display: grid;
+    text-align: center;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding: 20px 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+/* utility class*/
+/* .btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+} */
+ 
+.h-primary {
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+}
+
+.h-secondary {
+    font-size: 2rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+}
+
+
+
+.centre {
+    text-align: center;
+}
